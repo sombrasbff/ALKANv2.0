@@ -1,4 +1,2 @@
-scheda.js
-=========
-
-Draw a weeklong schedule using HTML5 canvas.
+ALKAN.js
+Create schedule for engineering students
