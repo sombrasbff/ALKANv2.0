@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>alkan.js</title>
+		<link rel="shortcut icon" href="favicon.png" />
+        <link rel="image_src" href="img/logo.png" />
+		<link rel="stylesheet" href="css/style.css" />
+		<meta name="description" content="Create your dream sched with a style." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="alkan. Style UP."/>
+		<meta property="og:url" content="https://sombrasbff.github.io/ALKANv2.0/"/>
+		<meta property="og:site_name" content="alkan"/>
+	</head>
+	<body>
+        <header>
+            <span class="helper"></span>
+            <img src="img/alkanlogo.png" alt="alkanlogo" width="385" height="85"/>
+        </header>
+        </header>
+        <section id="app">
+            <section id="tabs">
+                <div class="tab">
+                    <div class="tab-title">Home</div>
+                    <br class="clearfix" />
+                </div>
+                <div class="tab" id="manage_schedule_tab">
+                    <div class="tab-title">
+                        Manage Schedule
+                    </div>
+                    <br />
+                    <div class="tab-content visible" id="add_courses_content">
+                    <br />
+                        Add Courses
+                        <br />
+                            <input type="text" placeholder="Course Name" id="course" />
+                        <br />
+                        Course Background Color &nbsp;&nbsp;&nbsp;<input class="color {pickerPosition:'left'}" type="text" id="schedBgColor" />
+                        <button id="add_button">ADD</button>
+                        <br />
+                        <div style="float:left">Course List</div> <div><button id="clear_button" style="float:right">Clear Selected</button></div>
+                        <br />
+                        <ul id="course_list">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <br class="clearfix" />
+            </section>
+            <section id="sched">
+                <span class="helper"></span>
+                <canvas id="canvas"></canvas>
+                <br />
+
+                <button id="schedule_button">Generate Schedule</button>
+                <button id="download_button">Download</button>
+            </section>
+        </section>
+        <footer>
+            <table>
+            </table>
+            <h5>COMMENTS AND SUGGESTIONS? </h5>
+            <h5>Jscolor </h5>
+            <h5> JavaScript Color Picker,
+            <br />
+            Version: 2.0.4
+            <br />
+            License: GNU Lesser General Public License, http://www.gnu.org/copyleft/lesser.html
+            <br />
+            Author:  East Desire, http://odvarko.cz
+            <br />
+            Created: 2008-06-15
+            <br />
+            Link:    http://jscolor.com </h5>
+            <br class="clearfix"/>
+            <br class="clearfix"/>
+        </footer>
+        <script type="text/javascript" src="alkan.js"></script>
+        <script type="text/javascript" src="jscolor/jscolor.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
