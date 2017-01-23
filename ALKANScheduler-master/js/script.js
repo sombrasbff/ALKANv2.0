@@ -14,7 +14,7 @@
         headerHeight = document.getElementsByTagName('header')[0].clientHeight,
         i;
 
-    scheda.init('canvas');
+    alkan.init('canvas');
 
     (root.onresize = function(){
         app.height = tabs.style.height=  tabs.style.maxHeight = root.innerHeight - headerHeight + 'px';
@@ -59,7 +59,7 @@
         }
     }
 
-    download_button.onclick = scheda.downloadSchedule;
+    download_button.onclick = alkan.downloadSchedule;
 
     root.updateConfig = function (e, p) {
         var obj = {};
@@ -68,20 +68,20 @@
         case 2 :    obj[p[0]] = {};
                     obj[p[0]][p[1]] = e;
         }
-        scheda.setConfig(obj);
+        alkan.setConfig(obj);
     };
 
     document.body.onload = function(){
-        document.getElementById('bgColor').color.fromString(scheda.getConfig('bgColor').substring(1));
-        document.getElementById('headerBgColor').color.fromString(scheda.getConfig('headerBgColor').substring(1));
-        document.getElementById('timeBgColor').color.fromString(scheda.getConfig('time.bgColor').substring(1));
-        document.getElementById('timeBgColor').color.fromString(scheda.getConfig('time.bgColor').substring(1));
-        document.getElementById('miniGridColor').color.fromString(scheda.getConfig('miniGridColor').substring(1));
-        document.getElementById('hMainGridColor').color.fromString(scheda.getConfig('hMainGridColor').substring(1));
-        document.getElementById('vMainGridColor').color.fromString(scheda.getConfig('vMainGridColor').substring(1));
-        document.getElementById('timeColor').color.fromString(scheda.getConfig('time.color').substring(1));
-        document.getElementById('dayColor').color.fromString(scheda.getConfig('day.color').substring(1));
-        document.getElementById('schedColor').color.fromString(scheda.getConfig('sched.color').substring(1));
+        document.getElementById('bgColor').color.fromString(alkan.getConfig('bgColor').substring(1));
+        document.getElementById('headerBgColor').color.fromString(alkan.getConfig('headerBgColor').substring(1));
+        document.getElementById('timeBgColor').color.fromString(alkan.getConfig('time.bgColor').substring(1));
+        document.getElementById('timeBgColor').color.fromString(alkan.getConfig('time.bgColor').substring(1));
+        document.getElementById('miniGridColor').color.fromString(alkan.getConfig('miniGridColor').substring(1));
+        document.getElementById('hMainGridColor').color.fromString(alkan.getConfig('hMainGridColor').substring(1));
+        document.getElementById('vMainGridColor').color.fromString(alkan.getConfig('vMainGridColor').substring(1));
+        document.getElementById('timeColor').color.fromString(alkan.getConfig('time.color').substring(1));
+        document.getElementById('dayColor').color.fromString(alkan.getConfig('day.color').substring(1));
+        document.getElementById('schedColor').color.fromString(alkan.getConfig('sched.color').substring(1));
     };
 
     /*  modifications */
@@ -111,7 +111,7 @@
 
             // painting  
             /*
-            scheda.drawCourse2(
+            alkan.drawCourse2(
                 selectedCourse.time[0].d,
                 [selectedCourse.time[0].start, selectedCourse.time[0].end],
                 courseCode, "",
@@ -147,8 +147,8 @@
 
         if (drawnIds.length > 0) {
             for (i = 0; i < drawnIds.length; i++) {
-                scheda.init();
-                //scheda.remove(drawnIds[i]);
+                alkan.init();
+                //alkan.remove(drawnIds[i]);
             }
             drawnIds.length = 0;
         }
@@ -163,7 +163,7 @@
 
         for (i = 0; i < selectedCourses.length; i++) {
             var timeIntervalIdx = pickedTimesIdxs[i];
-            var id = scheda.drawCourse2(
+            var id = alkan.drawCourse2(
                 selectedCourses[i].time[timeIntervalIdx].day,
                 [selectedCourses[i].time[timeIntervalIdx].start, selectedCourses[i].time[timeIntervalIdx].end],
                 selectedCourses[i].course, "",
